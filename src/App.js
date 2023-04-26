@@ -1,6 +1,6 @@
 
 import { Component } from 'react';
-
+import CardList from './components/card-list/CardList';
 import './App.css';
 
 class App extends Component {
@@ -51,6 +51,7 @@ class App extends Component {
           <h1>{monster.name}</h1>
           </div>
        })}
+       <CardList />
     </div>
   );
 }
