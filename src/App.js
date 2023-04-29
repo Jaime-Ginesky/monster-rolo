@@ -17,13 +17,11 @@ class App extends Component {
  componentDidMount(){
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
-      .then((users) => this.setState(() => {
-        return {monsters: users}
-      },
-      () => {
-        console.log(this.state);
-      }
- ));
+      .then((users) => 
+       this.setState(() => {
+        return { monsters: users }; 
+       })
+      );
 }
   onSearchChange =  (event) => {
     const searchField = event.target.value.toLocaleLowerCase();
@@ -47,9 +45,12 @@ class App extends Component {
           <h1>{monster.name}</h1>
           </div>
        })}
+       <SearchBox 
+       onChangeHandler={onSearchChange} 
+       placeholder='search monsters'
+       className='monsters-search-box' />
        <CardList monsters={filteredMonsters}  />
-       <SearchBox onChangeHandler={onSearchChange} placeholder={onSearchChange} />
-    </div>
+        </div>
   );
 }
 }
