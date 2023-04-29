@@ -14,7 +14,7 @@ class App extends Component {
     };
  }
 
- componentDidMount(){
+ componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => 
@@ -33,18 +33,13 @@ class App extends Component {
    
     const { monsters, searchField} = this.state;
     const { onSearchChange } = this;
+
     const filteredMonsters = monsters.filter((monster) => {
       return monster.name.toLocaleLowerCase().includes(searchField);
     });
 
     return (
-    <div className="App">
-      
-       { filteredMonsters.map((monster) => {
-        return <div key={monster.id}>
-          <h1>{monster.name}</h1>
-          </div>
-       })}
+    <div className='App'>
        <SearchBox 
        onChangeHandler={onSearchChange} 
        placeholder='search monsters'
