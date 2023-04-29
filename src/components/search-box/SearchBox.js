@@ -6,10 +6,12 @@ render() {
      <input 
       className='search-box' 
       type='search' 
-      placeholder='search monsters' 
-      onChange={onSearchChange} />
+      placeholder={this.props.placeholder} 
+      onChange={this.props.onChangeHandler} />
       
     )
  }
 
 }
+
+export default SearchBox;
