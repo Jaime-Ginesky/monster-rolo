@@ -23,6 +23,7 @@ class App extends Component {
        })
       );
 }
+// returns and updates search results
   onSearchChange =  (event) => {
     const searchField = event.target.value.toLocaleLowerCase();
     this.setState(() => {
@@ -30,10 +31,10 @@ class App extends Component {
     });
   }
   render() {
-   
+  //  declaring variables for state to clean up and optimize code
     const { monsters, searchField} = this.state;
     const { onSearchChange } = this;
-
+  // when deleting letters in search box the filter reverses to normal per letter
     const filteredMonsters = monsters.filter((monster) => {
       return monster.name.toLocaleLowerCase().includes(searchField);
     });

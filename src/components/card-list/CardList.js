@@ -7,6 +7,7 @@ class CardList extends Component {
       const { monsters } = this.props;
        
       return (
+        // Card image, name and email
         <div className='card-list'>
            {monsters.map((monster) => {
             const { name, email, id } = monster;
