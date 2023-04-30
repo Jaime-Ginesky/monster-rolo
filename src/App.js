@@ -4,7 +4,22 @@ import CardList from './components/card-list/CardList';
 import SearchBox from './components/search-box/SearchBox';
 import './App.css';
 
-class App extends Component {
+const App = () => {
+
+  return (
+    <div className='App'>
+      <h1 className="app-title">Monster Party</h1>
+    
+      {/*  <SearchBox 
+       onChangeHandler={onSearchChange} 
+       placeholder='search monsters'
+       className='monsters-search-box' />
+       <CardList monsters={filteredMonsters}  />
+        </div> */}
+    </div>
+  );
+      }
+{/* class App extends Component {
  constructor() {
    super();
 
@@ -22,7 +37,7 @@ class App extends Component {
         return { monsters: users }; 
        })
       );
-}
+} */}{/* 
 // returns and updates search results
   onSearchChange =  (event) => {
     const searchField = event.target.value.toLocaleLowerCase();
@@ -51,6 +66,6 @@ class App extends Component {
   );
 }
 }
-
+ */}
 
 export default App;
